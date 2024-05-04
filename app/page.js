@@ -30,7 +30,7 @@ export default function Home() {
         // determine levenshtein distance based on current progress in the matrix
         // if the current letter is the same
         if (word1[w1ndex - 1] === word2[w2ndex - 1]) {
-          matrix[w1ndex][w2ndex] = Math.min(matrix[w1ndex - 1][w2ndex], matrix[w1ndex][w2ndex-1], matrix[w1ndex-1][w2ndex-1]);
+          matrix[w1ndex][w2ndex] = matrix[w1ndex-1][w2ndex-1];
         }
         // if the current letter is different
         else {
@@ -47,7 +47,7 @@ export default function Home() {
       <p>word 1: {word1}</p>
       <p>word 2: {word2}</p>
 
-      
+
     </main>
   );
 }
