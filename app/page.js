@@ -73,6 +73,7 @@ export default function Home() {
 
   return (
     <main className={styles.main}>
+      <h1>levvy</h1>
       <p>word 1: {word1}</p>
       <p>word 2: {word2}</p>
 

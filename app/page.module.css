@@ -1,3 +1,10 @@
+.main {
+    --yellow: #FDFDBD;
+    --green: #C8FFD4;
+    --blue: #B8E8FC;
+    --purple: #B1AFFF;
+}
+
 .graph {
     width: 20rem;
     padding: 1rem;
