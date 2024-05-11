@@ -40,14 +40,48 @@ export default function Home() {
     }
   }
 
-  console.log(matrix);
+  // render graph
+  // create a formatted copy of the matrix
+  let graph = [];
+
+  // first row - display for first word
+  graph.push([]);
+  for (let index = 0; index < word1.length + 2; index++) {
+    if (index < 2) {
+      graph[0].push('')
+    }
+    else {
+      graph[0].push(word1[index - 2]);
+    }
+  }
+
+  // other rows - import matrix
+  //  - set first index as word2 display
+  for (let index = 0; index < word2.length + 1; index++) {
+    if (index === 0) {
+      graph.push(['', ...matrix[index]]);
+    }
+    else {
+      graph.push([word2[index - 1], ...matrix[index]]);
+    }
+  }
+
+  console.log(graph);
 
   return (
     <main className={styles.main}>
       <p>word 1: {word1}</p>
       <p>word 2: {word2}</p>
 
-      
+      <div className='graph'>
+        {graph.map((row, rowIndex) => {
+          return <div key={`row-${rowIndex}`}>
+            {row.map((cell, cellIndex) => {
+              return <div key={`cell-${cellIndex}`}>{cell}</div>
+            })}
+          </div>
+        })}
+      </div>
     </main>
   );
 }
