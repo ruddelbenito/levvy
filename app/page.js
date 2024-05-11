@@ -47,8 +47,11 @@ export default function Home() {
   // first row - display for first word
   graph.push([]);
   for (let index = 0; index < word1.length + 2; index++) {
-    if (index < 2) {
+    if (index === 0) {
       graph[0].push('')
+    }
+    else if (index === 1) {
+      graph[0].push('_')
     }
     else {
       graph[0].push(word1[index - 2]);
@@ -59,7 +62,7 @@ export default function Home() {
   //  - set first index as word2 display
   for (let index = 0; index < word2.length + 1; index++) {
     if (index === 0) {
-      graph.push(['', ...matrix[index]]);
+      graph.push(['_', ...matrix[index]]);
     }
     else {
       graph.push([word2[index - 1], ...matrix[index]]);
@@ -73,11 +76,11 @@ export default function Home() {
       <p>word 1: {word1}</p>
       <p>word 2: {word2}</p>
 
-      <div className='graph'>
+      <div className={styles.graph}>
         {graph.map((row, rowIndex) => {
-          return <div key={`row-${rowIndex}`}>
+          return <div className={styles.row} key={`row-${rowIndex}`}>
             {row.map((cell, cellIndex) => {
-              return <div key={`cell-${cellIndex}`}>{cell}</div>
+              return <div className={styles.cell} key={`cell-${cellIndex}`}>{cell}</div>
             })}
           </div>
         })}
