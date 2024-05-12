@@ -86,6 +86,7 @@ export default function Home() {
           <input placeholder="word 1"></input>
           <p>to</p>
           <input placeholder="word 2"></input>
+          <button>change!</button>
         </div>
 
         <div className={styles.graph}>
