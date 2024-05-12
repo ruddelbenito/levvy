@@ -1,8 +1,11 @@
+"use client"
+
+import { useState } from "react";
 import Image from "next/image";
 import styles from "./page.module.css";
 
 export default function Home() {
-  let word1 = "test";
+  let [word1, setWord1] = useState("test");
   let word2 = "taste";
   let matrix = [];
 
@@ -73,18 +76,27 @@ export default function Home() {
 
   return (
     <main className={styles.main}>
-      <h1>levvy</h1>
-      <p>word 1: {word1}</p>
-      <p>word 2: {word2}</p>
+      <div className={styles.page}>
+        <h1 className={styles.title}>levvy</h1>
+        {/* <p>word 1: {word1}</p>
+        <p>word 2: {word2}</p> */}
 
-      <div className={styles.graph}>
-        {graph.map((row, rowIndex) => {
-          return <div className={styles.row} key={`row-${rowIndex}`}>
-            {row.map((cell, cellIndex) => {
-              return <div className={styles.cell} key={`cell-${cellIndex}`}>{cell}</div>
-            })}
-          </div>
-        })}
+        <div className={styles.prompt}>
+          <p>convert</p>
+          <input placeholder="word 1"></input>
+          <p>to</p>
+          <input placeholder="word 2"></input>
+        </div>
+
+        <div className={styles.graph}>
+          {graph.map((row, rowIndex) => {
+            return <div className={styles.row} key={`row-${rowIndex}`}>
+              {row.map((cell, cellIndex) => {
+                return <div className={styles.cell} key={`cell-${cellIndex}`}>{cell}</div>
+              })}
+            </div>
+          })}
+        </div>
       </div>
     </main>
   );

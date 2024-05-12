@@ -3,9 +3,26 @@
     --green: #C8FFD4;
     --blue: #B8E8FC;
     --purple: #B1AFFF;
+
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--purple);
+}
+
+.title {
+    text-align: center;
+    font-size: 5rem;
+    margin-bottom: 5rem;
+}
+
+.prompt {
+    display: flex;
 }
 
 .graph {
+    margin: 0 auto;
     width: 20rem;
     padding: 1rem;
     /* background-color: lime; */
