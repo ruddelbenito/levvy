@@ -21,6 +21,18 @@
     display: flex;
 }
 
+.button {
+    display: block;
+    margin: 0 auto;
+}
+
+.errorMessage {
+    width: 20rem;
+    margin: 0 auto;
+    font-size: 0.75rem;
+    color: var(--yellow);
+}
+
 .graph {
     margin: 0 auto;
     width: 20rem;
@@ -37,6 +49,6 @@
 .cell {
     /* background-color: pink; */
     padding: 0.5rem;
-    width: 2rem;
+    min-width: 1rem;
     text-align: center;
 }

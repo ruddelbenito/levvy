@@ -6,7 +6,8 @@ import styles from "./page.module.css";
 
 export default function Home() {
   let [word1, setWord1] = useState("test");
-  let word2 = "taste";
+  let [word2, setWord2] = useState("taste");
+  let [showError, setShowError] = useState(false);
   let matrix = [];
 
   // instantiate matrix
@@ -72,22 +73,45 @@ export default function Home() {
     }
   }
 
-  console.log(graph);
+  function update() {
+    let valid = true;
+    let userword1 = document.getElementById('user-word-1').value.toLowerCase();
+    let userword2 = document.getElementById('user-word-2').value.toLowerCase();
+    const lowercaseRegex = /^[a-z]+$/
+
+    if (!lowercaseRegex.test(userword1)) {
+      valid = false;
+    }
+
+    if (!lowercaseRegex.test(userword2)) {
+      valid = false;
+    }
+
+    if (valid) {
+      setShowError(false);
+      setWord1(userword1);
+      setWord2(userword2);
+    }
+    else {
+      setShowError(true);
+    }
+  }
 
   return (
     <main className={styles.main}>
       <div className={styles.page}>
         <h1 className={styles.title}>levvy</h1>
-        {/* <p>word 1: {word1}</p>
-        <p>word 2: {word2}</p> */}
 
         <div className={styles.prompt}>
           <p>convert</p>
-          <input placeholder="word 1"></input>
+          <input placeholder={word1} id='user-word-1'></input>
           <p>to</p>
-          <input placeholder="word 2"></input>
-          <button>change!</button>
+          <input placeholder={word2} id='user-word-2'></input>
         </div>
+
+        <button className={styles.button} onClick={update}>change!</button>
+
+        {showError ? <p className={styles.errorMessage}>invalid inputs - please ensure that they consist only of Latin script and try again</p> : <></>}
 
         <div className={styles.graph}>
           {graph.map((row, rowIndex) => {
