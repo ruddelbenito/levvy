@@ -102,16 +102,19 @@ export default function Home() {
       <div className={styles.page}>
         <h1 className={styles.title}>levvy</h1>
 
-        <div className={styles.prompt}>
-          <p>convert</p>
-          <input placeholder={word1} id='user-word-1'></input>
-          <p>to</p>
-          <input placeholder={word2} id='user-word-2'></input>
+        <div className={styles.form}>
+          <div className={styles.prompt}>
+            <p>convert</p>
+            <input placeholder={word1} id='user-word-1'></input>
+            <p>to</p>
+            <input placeholder={word2} id='user-word-2'></input>
+          </div>
+          <button className={styles.button} onClick={update}>change!</button>
         </div>
 
-        <button className={styles.button} onClick={update}>change!</button>
+        
 
-        {showError ? <p className={styles.errorMessage}>invalid inputs - please ensure that they consist only of Latin script and try again</p> : <></>}
+        {showError ? <p className={styles.errorMessage}>invalid inputs - please ensure that your words consist only of Latin script and try again</p> : <></>}
 
         <div className={styles.graph}>
           {graph.map((row, rowIndex) => {

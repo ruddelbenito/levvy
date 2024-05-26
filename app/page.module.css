@@ -14,16 +14,49 @@
 .title {
     text-align: center;
     font-size: 5rem;
-    margin-bottom: 5rem;
+}
+
+.form {
+    margin-top: 2rem;
 }
 
 .prompt {
     display: flex;
+    justify-content: space-between;
+}
+
+.prompt input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid black;
+    text-align: center;
+    width: 8rem;
+    font-weight: 700;
+    transition: 0.1s;
+}
+
+.prompt input:hover {
+    background-color: var(--yellow);
+}
+
+.prompt input:focus {
+    outline: none;
+    background-color: var(--yellow);
 }
 
 .button {
     display: block;
-    margin: 0 auto;
+    margin: 1rem auto 0.25rem auto;
+    border-radius: 0.5rem;
+    border: 1px solid black;
+    padding: 0.35rem;
+    font-weight: 700;
+    background-color: var(--yellow);
+    transition: 0.1s;
+}
+
+.button:hover {
+    background-color: var(--green);
 }
 
 .errorMessage {
