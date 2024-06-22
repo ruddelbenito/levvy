@@ -105,9 +105,13 @@ export default function Home() {
         <div className={styles.form}>
           <div className={styles.prompt}>
             <p>convert</p>
-            <input placeholder={word1} id='user-word-1'></input>
+            <div className={styles.wordWrapper}>
+              <input placeholder={word1} id='user-word-1'></input>
+            </div>
             <p>to</p>
-            <input placeholder={word2} id='user-word-2'></input>
+            <div className={styles.wordWrapper}>
+              <input placeholder={word2} id='user-word-2'></input>
+            </div>
           </div>
           <button className={styles.button} onClick={update}>change!</button>
         </div>

@@ -23,25 +23,35 @@
 .prompt {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+.wordWrapper {
+    background-color: var(--purple);
+    filter: brightness(125%);
+    border-radius: 0.35rem;
+    transition: 0.25s;
 }
 
 .prompt input {
     background-color: transparent;
     border: none;
     border-bottom: 1px solid black;
+    padding: 0.5rem;
     text-align: center;
     width: 8rem;
     font-weight: 700;
     transition: 0.1s;
 }
 
-.prompt input:hover {
-    background-color: var(--yellow);
+.wordWrapper:hover {
+    filter: brightness(115%);
+    /* background-color: var(--yellow); */
 }
 
 .prompt input:focus {
     outline: none;
-    background-color: var(--yellow);
+    /* background-color: var(--yellow); */
 }
 
 .button {
@@ -51,25 +61,28 @@
     border: 1px solid black;
     padding: 0.35rem;
     font-weight: 700;
-    background-color: var(--yellow);
+    background-color: var(--green);
     transition: 0.1s;
 }
 
 .button:hover {
-    background-color: var(--green);
+    filter: brightness(85%);
 }
 
 .errorMessage {
     width: 20rem;
     margin: 0 auto;
     font-size: 0.75rem;
-    color: var(--yellow);
+    color: red;
 }
 
 .graph {
     margin: 0 auto;
     padding: 1rem;
-    background-color: var(--blue);
+    background-color: var(--purple);
+    filter: brightness(120%);
+    border-radius: 0.5rem;
+    border: 1px solid black;
 }
 
 .row {
