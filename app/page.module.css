@@ -37,7 +37,7 @@
     background-color: transparent;
     border: none;
     border-bottom: 1px solid black;
-    padding: 0.5rem;
+    padding: 0.25rem;
     text-align: center;
     width: 8rem;
     font-weight: 700;
@@ -62,7 +62,7 @@
     padding: 0.35rem;
     font-weight: 700;
     background-color: var(--green);
-    transition: 0.1s;
+    transition: 0.2s;
 }
 
 .button:hover {
@@ -80,7 +80,6 @@
     margin: 0 auto;
     padding: 1rem;
     background-color: var(--purple);
-    filter: brightness(120%);
     border-radius: 0.5rem;
     border: 1px solid black;
 }
@@ -91,9 +90,21 @@
     justify-content: space-between;
 }
 
+.row:last-child {
+    background-color: var(--green);
+}
+
 .cell {
     /* background-color: pink; */
     padding: 0.5rem;
     min-width: 1rem;
     text-align: center;
+}
+
+.cell:last-child {
+    background-color: var(--green);
+}
+
+.row:last-child>.cell:last-child {
+    filter: brightness(85%);
 }
