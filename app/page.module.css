@@ -26,6 +26,11 @@
     align-items: center;
 }
 
+.prompt>p,
+.prompt>div {
+    margin: 0 0.2rem;
+}
+
 .wordWrapper {
     background-color: var(--purple);
     filter: brightness(125%);
