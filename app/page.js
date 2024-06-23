@@ -133,6 +133,11 @@ export default function Home() {
             </div>
           })}
         </div>
+
+        <div className={styles.endStatement}>
+          <p>Changing &quot;{word1}&quot; to become &quot;{word2}&quot; takes at least {matrix[word2.length][word1.length]} edits.</p>
+        </div>
+
       </div>
     </main>
   );
