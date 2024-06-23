@@ -78,7 +78,7 @@
 
 .errorMessage {
     width: 20rem;
-    margin: 0 auto;
+    margin: 0.5rem auto;
     font-size: 0.75rem;
     color: red;
 }
