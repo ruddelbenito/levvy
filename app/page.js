@@ -113,7 +113,7 @@ export default function Home() {
               <input placeholder={word2} id='user-word-2'></input>
             </div>
           </div>
-          <button className={styles.button} onClick={update}>change!</button>
+          <button className={styles.button} onClick={update}>convert!</button>
         </div>
 
         
