@@ -20,6 +20,7 @@
 
 .descriptor {
     margin: 1rem 0;
+    text-align: center;
 }
 
 .form {
@@ -118,4 +119,8 @@
 
 .row:last-child>.cell:last-child {
     filter: brightness(85%);
+}
+
+.endStatement {
+    text-align: center;
 }
