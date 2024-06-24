@@ -103,7 +103,7 @@ export default function Home() {
         <h1 className={styles.title}>levvy</h1>
         
         <div className={styles.descriptor}>
-           <p>A <a href="https://www.geeksforgeeks.org/introduction-to-levenshtein-distance/" target="_blank" rel="noreferrer">Levenshtein Distance</a> visualisation tool created by <a href="https://ruddel.ca/" target="_blank" rel="noreferrer">ruddel</a>.</p>
+           <p>A <a href="https://www.geeksforgeeks.org/introduction-to-levenshtein-distance/" target="_blank" rel="noreferrer">Levenshtein Distance</a> visualisation tool{/* created by <a href="https://ruddel.ca/" target="_blank" rel="noreferrer">ruddel</a>*/}.</p>
         </div>
 
         <div className={styles.form}>
